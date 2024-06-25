@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Football Match Schedule</string>
+
+    <string name="TitleHomeFragment">Home</string>
+
+    <string name="LeagueLogo">League Logo</string>
+    <string name="LeagueName">League Name</string>
+    <string name="LeagueSeason">League Season</string>
+    <string name="LeagueSeasonStart">Season Start</string>
+    <string name="LeagueSeasonEnd">Season End</string>
+    <string name="Schedule">Schedule</string>
+    <string name="Chart">Chart</string>
+    <string name="topscorer">Top scorer</string>
+    <string name="topassist">Top assist</string>
+    <string name="Other">Other</string>
+    <string name="Tutorial">Tutorial</string>
+    <string name="About">About</string>
+    <string name="Contact">Contact</string>
+    <string name="Setting">Setting</string>
+    <string name="Exit">Exit</string>
+    <string name="Time">Time</string>
+    <string name="Date">Date</string>
+    <string name="Round">Round</string>
+    <string name="HomeTeam">Home Team</string>
+    <string name="AwayTeam">Away Team</string>
+    <string name="StatsDetail">The stats detail</string>
+    <string name="Win">Win</string>
+    <string name="Lose">Lose</string>
+    <string name="Draw">Draw</string>
+    <string name="ConcededGoal">Conceded Goal</string>
+    <string name="ScoredGoal">Scored Goal</string>
+    <string name="MatchesPlayed">Matches Played</string>
+    <string name="GoalDifference">Goal Difference</string>
+    <string name="TotalScore">Total Score</string>
+    <string name="Rank">Rank</string>
+    <string name="Confirm">Confirm</string>
+    <string name="Contact1">Nguyễn Văn Hợp</string>
+    <string name="About3">This application is made for learning purposes only, not for commercial use.</string>
+    <string name="About2">The data copyright used in this application belongs to VnExpress.</string>
+    <string name="About1">Last updated: 12/06/2024</string>
+    <string name="About4">The application will be further developed in the future and will solve the problems that I am facing at the moment.</string>
+    <string name="all">ALL</string>
+
+
+</resources>
