@@ -51,43 +51,6 @@ public class HomeFragment extends Fragment {
         binding.btnContact.setOnClickListener(view -> Navigation.findNavController(view).navigate(R.id.topassistFragment));
     }
 
-    private void showContactDialog(View view) {
-        Dialog dialog = new Dialog(requireContext());
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.dialog_contact_home);
-        dialog.setCanceledOnTouchOutside(false);
-        Window window = dialog.getWindow();
-        if (window == null) {
-            return;
-        }
-        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
-        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-
-        Button btnConfirmContactHome = dialog.findViewById(R.id.btn_confirm_contact_home);
-
-        btnConfirmContactHome.setOnClickListener(v -> dialog.dismiss());
-
-        dialog.show();
-    }
-
-    private void showAboutDialog(View view) {
-        Dialog dialog = new Dialog(requireContext());
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.dialog_about_home);
-        dialog.setCanceledOnTouchOutside(false);
-        Window window = dialog.getWindow();
-        if (window == null) {
-            return;
-        }
-        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
-        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-
-        Button btnConfirmAboutHome = dialog.findViewById(R.id.btn_confirm_about_home);
-
-        btnConfirmAboutHome.setOnClickListener(v -> dialog.dismiss());
-
-        dialog.show();
-    }
 
     private void initView() {
         progressDialog = new ProgressDialog(requireContext());

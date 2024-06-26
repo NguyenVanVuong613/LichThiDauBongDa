@@ -48,7 +48,7 @@ public class TopscorerAdapter extends ListAdapter<Topscorer, TopscorerAdapter.Sc
         @SuppressLint("SetTextI18n")
         public void bindData(Topscorer item) {
             itemBinding.tvTeam1.setText(item.getTeamName());
-            itemBinding.tvTime.setText("player: " + item.getPlayerName());
+            itemBinding.tvTime.setText( item.getPlayerName());
             itemBinding.tvDate.setText("scorer: "+ item.getGoals().getTotal());
             Glide.with(itemView.getContext()).load(item.getLogoTeam()).into(itemBinding.imgTeam1);
             Animation animation = AnimationUtils.loadAnimation(itemView.getContext(), R.anim.scale_alpha);

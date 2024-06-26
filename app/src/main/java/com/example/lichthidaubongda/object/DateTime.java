@@ -5,9 +5,9 @@ import androidx.annotation.NonNull;
 public class DateTime implements Comparable<DateTime> {
     private static final int[] DAYS = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-    private final int month;   // month (between 1 and 12)
-    private final int day;     // day   (between 1 and DAYS[month]
-    private final int year;    // year
+    private final int month;
+    private final int day;
+    private final int year;
     private final int hour;
     private final int minute;
 
