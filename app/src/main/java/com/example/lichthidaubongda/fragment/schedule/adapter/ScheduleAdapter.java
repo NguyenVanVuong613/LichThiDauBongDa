@@ -16,6 +16,10 @@ import com.example.lichthidaubongda.databinding.ItemRcvScheduleBinding;
 import com.example.lichthidaubongda.fragment.schedule.model.Schedule;
 import com.example.lichthidaubongda.object.DateTime;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class ScheduleAdapter extends ListAdapter<Schedule, ScheduleAdapter.ScheduleAdapterVH> {
 
     public ScheduleAdapter() {
@@ -53,8 +57,20 @@ public class ScheduleAdapter extends ListAdapter<Schedule, ScheduleAdapter.Sched
             itemBinding.tvTeam1.setText(item.getHomeTeam().getTeamName());
             itemBinding.tvTeam2.setText(item.getAwayTeam().getTeamName());
             if (item.getStatus().equals("FT")){
+                String strDate = item.getDateTime();
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+                Date convertedDate = new Date();
+                try {
+                    convertedDate = dateFormat.parse(strDate);
+                    SimpleDateFormat sdfnewformat = new SimpleDateFormat("HH:mm/dd-MM-yyyy  ");
+                    String finalDateString = sdfnewformat.format(convertedDate);
+                    itemBinding.tvEvent.setText(finalDateString);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
                 itemBinding.tvDate.setText(item.getStatus());
                 itemBinding.tvTime.setText(item.getScore().getFullTime());
+
             } else {
                 String dateTime = item.getDateTime();
                 String[] fields = dateTime.split("T");

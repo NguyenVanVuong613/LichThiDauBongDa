@@ -1,5 +1,6 @@
 package com.example.lichthidaubongda.fragment.schedule.repository;
 
+import android.os.Build;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -10,6 +11,7 @@ import com.example.lichthidaubongda.fragment.schedule.model.DataSchedules;
 import com.example.lichthidaubongda.fragment.schedule.model.Schedule;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import retrofit2.Call;
@@ -45,6 +47,9 @@ public class ScheduleRepository {
                 DataSchedules dataSchedules = response.body();
                 if (dataSchedules != null){
                     schedules = dataSchedules.getDataIdSchedule().getIdSchedules().getSchedules();
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                        schedules.sort(Comparator.comparing(Schedule::getDateTime).reversed());
+                    }
                     schedulesAllMatchesML.postValue(schedules);
                 }
             }
